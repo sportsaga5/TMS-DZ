@@ -1,0 +1,15 @@
+# задание 1
+x = input("Введите длину списка: ")
+list = [i for i in range(x+1)]
+print(list)
+
+# задание 2 
+def list_generator(x: int) -> list:
+    list = [i for i in range(x+1)]
+    return list
+print(list_generator(x))
+
+# задание 3
+
+    
+

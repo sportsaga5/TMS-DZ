@@ -1,7 +1,7 @@
 import time
 from datetime import datetime
 
-# задание 1
+# задание 1 
 x = input("Введите длину списка: ")
 print([i for i in range(1, x+1)])
 

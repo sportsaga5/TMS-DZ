@@ -8,7 +8,7 @@ def decorator(function_to_decorate):
         """Спрашивает у пользователя его имя"""
         print("Как тебя зовут?")
         function_to_decorate()
-        print("Приятно познакомиться")
+        print("Приятно познакомиться!")
     return wrapper_around
 
 # задание 2

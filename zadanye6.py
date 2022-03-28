@@ -2,7 +2,7 @@
 from functools import reduce
 
 
-def decorator(function_to_decorate):
+def meet_with_people_decorator(function_to_decorate):
     """Декоратор"""
     def meet_with_people():
         """Спрашивает у пользователя его имя"""

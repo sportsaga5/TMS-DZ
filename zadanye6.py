@@ -22,7 +22,7 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 print(reduce(my_sum, numbers))
 
 # задание 3
-@decorator
+@meet_with_people_decorator
 def say_hello():
     """Выводит приветствие пользователя"""
     name = input('Введите имя: ')

@@ -12,7 +12,7 @@ class parent:
         return f'Пока!' # метод родителя
 
     def __str__(self):
-        return f'Это родитель с именем: {self.name} и возрастом: {self.age}!' # переопределение __str__
+        return f'Это родитель с именем: {self.name} и возрастом: {self.age}!' # переопределение str
 
 parent1 = parent("Billy", "40")
 
@@ -32,7 +32,7 @@ class first_twins(parent):
         return f'Моя любимая игрушка это - {self.lovely_toy}!' # его собственный метод
 
     def __str__(self):
-        return f'Это ребёнок с именем: {self.name} и возрастом: {self.age} и любимой игрушкой: {self.lovely_toy}!' # переопределение __str__
+        return f'Это ребёнок с именем: {self.name} и возрастом: {self.age} и любимой игрушкой: {self.lovely_toy}!' # переопределение str
 
 class second_twins(parent):
     """Второй из детей близнецов с хобби"""

@@ -1,7 +1,7 @@
 # создание класса родителя
-class parent:
+class Parent:
     """Родитель в прямом смысле слова"""
-    def __init__(self, name: str, age: str):
+    def __init__(self, name: str, age: int):
         self.name = name
         self.age = age
     
@@ -14,12 +14,12 @@ class parent:
     def __str__(self):
         return f'Это родитель с именем: {self.name} и возрастом: {self.age}!' # переопределение __str__
 
-parent1 = parent("Billy", "40")
+parent1 = Parent("Billy", 40)
 
 print(parent1.say_hello())
 
 # создание класса наследника
-class first_twins(parent):
+class First_twin(Parent):
     """Первый из детей близнецов с игрушкой"""
     def __init__(self, lovely_toy: str, **kwargs):
         self.lovely_toy = lovely_toy
@@ -34,7 +34,7 @@ class first_twins(parent):
     def __str__(self):
         return f'Это ребёнок с именем: {self.name} и возрастом: {self.age} и любимой игрушкой: {self.lovely_toy}!' # переопределение __str__
 
-class second_twins(parent):
+class Second_twin(Parent):
     """Второй из детей близнецов с хобби"""
     def __init__(self, hobby: str, **kwargs):
         self.hobby = hobby
@@ -50,16 +50,16 @@ class second_twins(parent):
         return f'Это ребёнок с именем: {self.name} и возрастом: {self.age} и хобби: {self.hobby}!' # переопределение __str__
 
 # близнец 1
-twin1 = first_twins(
+twin1 = First_twin(
     name = "Helly",
-    age = "10",
+    age = 10,
     lovely_toy = "машина"
 )
 
 # близнец 2
-twin2 = second_twins(
+twin2 = Second_twin(
     name = "Selly",
-    age = "10",
+    age = 10,
     hobby = "футбол"
 )
 
@@ -69,15 +69,15 @@ print(twin1.my_lovely_toy())
 print(twin2.say_hello())
 print(twin2.my_hobby())
 
-class little_kid(first_twins, second_twins):
+class Little_kid(First_twin, Second_twin):
     """Младший ребёнок с наследованием от 2 близнецов"""
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
 # младший брат   
-little_brother = little_kid(
+little_brother = Little_kid(
     name = "Ben",
-    age = "5",
+    age = 5,
     lovely_toy = "вертолёт",
     hobby = "баскетбол"
 )
